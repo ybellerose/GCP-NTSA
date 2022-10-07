@@ -50,6 +50,7 @@ echo "gcloud ids endpoints create $IDS_ENDPOINT_NAME \
 --network=$VPC_NAME \
 --zone=$IDS_ENDPOINT_ZONE \
 --severity=$IDS_SEVERITY \
+--enable-traffic-logs \
 --async"
 
 echo ""
