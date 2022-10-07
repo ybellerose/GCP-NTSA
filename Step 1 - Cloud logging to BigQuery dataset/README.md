@@ -16,14 +16,12 @@ terraform apply -auto-approve
 ```
 
 ## Actions taken by terraform
-```
-Creation of a Service account for Looker (ntsa-looker-sa@[project_id].iam.gserviceaccount.com)
-Creation of  a Bigquery Dataset for Cloud IDS and Cloud Armor logs
-Creating a Cloud Router log sink to BigQuery
-Binding of the Looker service account to BigQuery dataset
-Binding of the  writer_identity IAM access to BigQuery dataset to write logs
+- Creation of a Service account for Looker (ntsa-looker-sa@[project_id].iam.gserviceaccount.com)
+- Creation of  a Bigquery Dataset for Cloud IDS and Cloud Armor logs
+- Creating a Cloud Router log sink to BigQuery
+- Binding of the Looker service account to BigQuery dataset
+- Binding of the  writer_identity IAM access to BigQuery dataset to write logs
 
-```
 ### Filter
 Default active filters, feel free to modify those filters to reflect your needs.
 ids.googleapis.com%2Fthreat
