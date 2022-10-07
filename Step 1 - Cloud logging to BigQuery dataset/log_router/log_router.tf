@@ -13,7 +13,7 @@ resource "google_logging_project_sink" "sink" {
     destination = "bigquery.googleapis.com/projects/${var.project_id}/datasets/${var.dataset_name}"
 
     # Log all from ids threat & traffic + Cloud Armor
-    filter = "logName:('projects/${var.project_id}/logs/ids.googleapis.com%2Fthreat') OR ('projects/${var.project_id}/logs/ids.googleapis.com%2Ftraffic') OR ('projects/${var.project_id}/logs/requests')"
+    filter = "logName=projects/${var.project_id}/logs/requests OR logName=projects/${var.project_id}/logs/ids.googleapis.com%2Fthreat OR logName=projects/${var.project_id}/logs/ids.googleapis.com%2Ftraffic"
     
     # Use a unique writer (creates a unique service account used for writing)
     unique_writer_identity = true
